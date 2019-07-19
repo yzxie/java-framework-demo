@@ -2,7 +2,6 @@ package com.yzxie.demo.java.thriftclient.thrift;
 
 import com.yzxie.demo.java.thrift.api.RpcHelloService;
 import org.apache.thrift.protocol.TBinaryProtocol;
-import org.apache.thrift.protocol.TProtocol;
 import org.apache.thrift.transport.*;
 
 /**

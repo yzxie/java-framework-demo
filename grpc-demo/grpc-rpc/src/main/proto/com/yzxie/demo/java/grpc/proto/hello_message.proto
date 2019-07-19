@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package com.yzxie.demo.java.grpc.proto;
+
+option java_multiple_files = true;
+option java_package = "com.yzxie.demo.java.grpc.rpc";
+option java_outer_classname = "HelloMessageProto";
+
+message HelloRequest {
+    string userName = 1;
+}
+
+message HelloResponse {
+    string message = 1;
+}

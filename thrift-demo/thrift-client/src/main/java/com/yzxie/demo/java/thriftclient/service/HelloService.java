@@ -25,11 +25,14 @@ public class HelloService {
 
     public String sayHello(String userName) {
         try {
+            // 建立socket连接
             thriftClient.open();
+            // 发起RPC方法调用请求
             return thriftClient.getHelloClient().getHello(userName);
         } catch (TException e) {
             LOG.error("sayHello {}", userName, e);
         } finally {
+            // 关闭socket连接
             thriftClient.close();
         }
 

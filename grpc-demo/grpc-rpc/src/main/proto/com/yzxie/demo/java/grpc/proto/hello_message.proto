@@ -2,14 +2,17 @@ syntax = "proto3";
 
 package com.yzxie.demo.java.grpc.proto;
 
+// 编译生成的Java文件对应的包和类名
 option java_multiple_files = true;
 option java_package = "com.yzxie.demo.java.grpc.rpc";
 option java_outer_classname = "HelloMessageProto";
 
+// 请求数据结构
 message HelloRequest {
     string userName = 1;
 }
 
+// 响应数据结构
 message HelloResponse {
     string message = 1;
 }

@@ -35,14 +35,18 @@ public class ThriftServer {
 
     public void start() {
         try {
+            // 非阻塞NIO通信
             TNonblockingServerTransport serverTransport = new TNonblockingServerSocket(port);
+            // 参数设置
             TNonblockingServer.Args serverArgs = new TNonblockingServer.Args(serverTransport);
             serverArgs.protocolFactory(new TBinaryProtocol.Factory());
             // 可以不指定，TNonblockingServer默认为TFramedTransport
             serverArgs.transportFactory(new TFramedTransport.Factory());
 
+            // RPC请求处理器，需要指定提供RPC方法的服务类对象
             RpcHelloService.Processor processor = new RpcHelloService.Processor<RpcHelloService.Iface>(rpcHelloService);
             serverArgs.processor(processor);
+            // NIO服务器监听thrift客户端的连接请求和后续的RPC方法调用请求
             TNonblockingServer server = new TNonblockingServer(serverArgs);
             LOG.info("TNonblockingServer listen on: {}", port);
             // 阻塞等待客户端连接到来

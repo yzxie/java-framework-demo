@@ -19,6 +19,7 @@ public class RpcHelloServiceImpl extends RpcHelloServiceGrpc.RpcHelloServiceImpl
         HelloResponse response = HelloResponse.newBuilder()
                 .setMessage("Hello, " + request.getUserName())
                 .build();
+        // 响应RPC客户端的RPC调用请求
         responseObserver.onNext(response);
         responseObserver.onCompleted();
     }

@@ -29,7 +29,9 @@ public class GrpcClient {
     @Value("${grpc.serverPort}")
     private int port;
 
+    // Grpc客户端channel
     private ManagedChannel channel;
+    // RPC服务端点（stub）
     private RpcHelloServiceGrpc.RpcHelloServiceBlockingStub blockingStub;
 
 //    public GrpcClient() {
@@ -39,6 +41,7 @@ public class GrpcClient {
 
     @PostConstruct
     public void init() {
+        // 指定Grpc服务端的域名和端口
         channel = ManagedChannelBuilder.forAddress(host, port).usePlaintext(true).build();
         blockingStub = RpcHelloServiceGrpc.newBlockingStub(channel);
     }
@@ -51,6 +54,7 @@ public class GrpcClient {
     public String getHello(String userName) {
         try {
             HelloRequest request = HelloRequest.newBuilder().setUserName(userName).build();
+            // 通过RPC服务端点（stub）发起RPC方法调用
             HelloResponse response = blockingStub.sayHello(request);
             return response.getMessage();
         } catch (StatusRuntimeException e) {

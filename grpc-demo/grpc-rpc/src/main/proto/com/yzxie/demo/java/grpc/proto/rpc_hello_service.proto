@@ -2,12 +2,15 @@ syntax = "proto3";
 
 package com.yzxie.demo.java.grpc.proto;
 
+// 编译生成的Java文件对应的包和类名
 option java_multiple_files = true;
 option java_package = "com.yzxie.demo.java.grpc.rpc";
 option java_outer_classname = "RpcHelloServiceProto";
 
 import "com/yzxie/demo/java/grpc/proto/hello_message.proto";
 
+// RPC接口
 service RpcHelloService {
+    // RPC方法声明
     rpc sayHello(HelloRequest) returns (HelloResponse);
 }

@@ -35,9 +35,11 @@ public class GrpcServer {
 
     @PostConstruct
     public void init() {
+        // 指定监听端口和RPC服务的业务逻辑实现类rpcHelloService
         server = ServerBuilder.forPort(port).addService(rpcHelloService).build();
     }
 
+    // 开启在指定端口监听Grpc客户端的RPC方法调用请求
     public void start() {
         try {
             server.start();

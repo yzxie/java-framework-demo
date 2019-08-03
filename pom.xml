@@ -12,6 +12,7 @@
         <module>distribute-lock</module>
         <module>thrift-demo</module>
         <module>grpc-demo</module>
+        <module>spring-demo</module>
     </modules>
 
 </project>

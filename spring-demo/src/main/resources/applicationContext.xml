@@ -11,7 +11,7 @@
     <context:component-scan base-package="com.yzxie.demo.springdemo.context.xml" />
 
     <!--配置 Java bean 对象 -->
-    <bean id="demoModel" class="com.yzxie.demo.springdemo.context.xml.DemoModel">
+    <bean id="demoModel" class="com.yzxie.demo.springwebdemo.springdemo.context.xml.DemoModel">
         <property name="name" value="xyz"/>
     </bean>
 

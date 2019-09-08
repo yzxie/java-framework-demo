@@ -1,4 +1,4 @@
-package com.yzxie.demo.java.springdemo.context;
+package com.yzxie.demo.springdemo.context;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

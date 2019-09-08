@@ -1,16 +1,13 @@
-package com.yzxie.demo.java.springdemo.context;
-
-import org.springframework.stereotype.Component;
+package com.yzxie.demo.springdemo.context.xml;
 
 /**
  * Author: xieyizun
  * Version: 1.0
- * Date: 2019-08-03
+ * Date: 2019-08-10
  * Description:
  **/
-@Component
-public class ObjectB {
-    private String name = "B";
+public class DemoModel {
+    private String name;
 
     public String getName() {
         return name;

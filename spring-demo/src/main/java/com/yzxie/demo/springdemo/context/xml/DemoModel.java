@@ -1,4 +1,4 @@
-package com.yzxie.demo.springwebdemo.springdemo.context.xml;
+package com.yzxie.demo.springdemo.context.xml;
 
 /**
  * Author: xieyizun

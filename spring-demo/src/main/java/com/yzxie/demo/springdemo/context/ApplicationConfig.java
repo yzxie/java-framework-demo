@@ -1,12 +1,9 @@
-package com.yzxie.demo.springwebdemo.springdemo.context;
+package com.yzxie.demo.springdemo.context;
 
-import com.yzxie.demo.springwebdemo.springdemo.context.xml.DemoModel;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.FilterType;
-
-import javax.xml.ws.Service;
+import com.yzxie.demo.springdemo.context.condition.ConditionConfig;
+import com.yzxie.demo.springdemo.context.xml.DemoModel;
+import org.springframework.context.annotation.*;
+import org.springframework.stereotype.Service;
 
 /**
  * Author: xieyizun
@@ -19,6 +16,8 @@ import javax.xml.ws.Service;
     includeFilters = {
         @ComponentScan.Filter(type = FilterType.ANNOTATION, classes = {Service.class})
     }) // 相当于 <context:component-scan /> 标签
+@PropertySource("classpath:application.properties")
+@Import(ConditionConfig.class)
 public class ApplicationConfig {
 
     @Bean // 相当于 <bean> 标签

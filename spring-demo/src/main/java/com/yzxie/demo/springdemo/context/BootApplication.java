@@ -1,4 +1,4 @@
-package com.yzxie.demo.springwebdemo.springdemo.context;
+package com.yzxie.demo.springdemo.context;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -20,7 +20,10 @@ public class BootApplication {
         iocContainer.refresh();
 
         // 验证IOC容器对Java对象的创建与依赖注入
-        ObjectA objectA = iocContainer.getBean(ObjectA.class);
-        System.out.println("ObjectB's name is " + objectA.getObjectB().getName());
+        // ObjectA objectA = iocContainer.getBean(ObjectA.class);
+        // System.out.println("ObjectB's name is " + objectA.getObjectB().getName());
+
+        Object propertyData = iocContainer.getBean(String.class);
+        System.out.println("propertyData is " + propertyData.toString());
     }
 }

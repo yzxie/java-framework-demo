@@ -2,6 +2,7 @@ package com.yzxie.study.java.demo.weatherstarter;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -13,6 +14,8 @@ import org.springframework.context.annotation.Configuration;
  **/
 @Configuration
 @ConditionalOnClass(WeatherTemplate.class)
+// 引入属性配置类 WeatherProperties
+@EnableConfigurationProperties(WeatherProperties.class)
 public class WeatherAutoConfiguration {
 
     @Bean

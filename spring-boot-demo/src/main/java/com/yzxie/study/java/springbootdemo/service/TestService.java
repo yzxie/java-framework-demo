@@ -19,4 +19,6 @@ public class TestService {
     public String getRedisStrValue(String key) {
         return (String)redisTemplate.opsForValue().get(key);
     }
+
+
 }

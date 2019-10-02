@@ -16,8 +16,18 @@ public class WeatherTemplate {
     /**
      * 国家气象局天气查询接口
      */
-    private static String WEATHER_QUERY_API = "http://www.weather.com.cn/data/cityinfo/";
+    private static String DEFAULT_QUERY_API = "http://www.weather.com.cn/data/cityinfo/";
     private static String WEATHER_QUERY_API_TYPE = ".html";
+
+    private String queryUrl;
+
+    public WeatherTemplate() {
+        this.queryUrl = DEFAULT_QUERY_API;
+    }
+
+    public WeatherTemplate(String url) {
+        this.queryUrl = url;
+    }
 
     /**
      * 根据给定的地区代号，查询天气情况
@@ -26,7 +36,7 @@ public class WeatherTemplate {
      * @return
      */
     public String query(String areaCode) {
-        String url = WEATHER_QUERY_API + areaCode + WEATHER_QUERY_API_TYPE;
+        String url = queryUrl + areaCode + WEATHER_QUERY_API_TYPE;
         RestTemplate restTemplate=new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
         HttpEntity<String> entity = new HttpEntity<>(headers);

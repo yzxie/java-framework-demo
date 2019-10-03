@@ -11,7 +11,7 @@
     <groupId>com.yzxie.study.java</groupId>
     <artifactId>spring-boot-starter-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-starter-demo</name>
+    <name>spring-boot-starter-demo</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

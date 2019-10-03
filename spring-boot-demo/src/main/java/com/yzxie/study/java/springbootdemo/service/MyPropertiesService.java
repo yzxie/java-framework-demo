@@ -21,7 +21,7 @@ public class MyPropertiesService {
     private Environment environment;
 
     public String getMyValue() {
-        return myValue;
+        return "my-properties: " + myValue + ", custom value: " + environment.getProperty("my-custom-key");
     }
 
     public String getMyValue2() {

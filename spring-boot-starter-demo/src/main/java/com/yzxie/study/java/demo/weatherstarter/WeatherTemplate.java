@@ -39,7 +39,7 @@ public class WeatherTemplate {
         String url = queryUrl + areaCode + WEATHER_QUERY_API_TYPE;
         RestTemplate restTemplate=new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
-        HttpEntity<String> entity = new HttpEntity<>(headers);
+        HttpEntity<String> entity = new HttpEntity<String>(headers);
         String strbody=restTemplate.exchange(url, HttpMethod.GET, entity,String.class).getBody();
         try {
             // 解决中文乱码问题

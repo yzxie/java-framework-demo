@@ -37,8 +37,14 @@
 
         <dependency>
             <groupId>com.yzxie.study.java</groupId>
-            <artifactId>spring-starter-demo</artifactId>
+            <artifactId>spring-boot-starter-demo</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
         </dependency>
     </dependencies>
 

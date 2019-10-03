@@ -1,4 +1,9 @@
 spring.redis:
     host: localhost
     port: 6379
-my-key: my-value
+my-key: my-value2
+
+spring:
+    devtools:
+        restart:
+            exclude: static/**,public/**

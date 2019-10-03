@@ -13,9 +13,9 @@
         <module>thrift-demo</module>
         <module>grpc-demo</module>
         <module>spring-demo</module>
-        <module>spring-web-demo</module>
-        <module>spring-web-demo</module>
-        <module>spring-web-demo</module>
+        <module>spring-boot-starter-demo</module>
+        <module>spring-boot-demo</module>
+        <module>spring-demo</module>
     </modules>
 
 </project>
